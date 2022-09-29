@@ -1,4 +1,4 @@
-package com.nobody.marsrover;
+package com.nobody.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
