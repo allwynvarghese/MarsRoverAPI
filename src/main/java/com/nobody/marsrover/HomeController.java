@@ -1,16 +1,22 @@
-package com.nobody.web;
+package com.nobody.marsrover;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
+
 @Controller
 public class HomeController {
 	
+	@Autowired
+	private MarsRoverApiServices roverService;
+	
 	@GetMapping("/")
 	public String getHomeView(Model model) {
-		model.addAttribute("name", "Allwyn");
-		model.addAttribute("address", "Wadenbucher Str 19, Boeblingen 71032, Germany");
+		MarsRoverAPIResponse roverData = roverService.getRoverData();
+		model.addAttribute("roverData", roverData);
 		return "index";
 	}
 	

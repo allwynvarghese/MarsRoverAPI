@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.nobody.response.MarsRoverAPIResponse;
+import com.nobody.marsrover.MarsRoverAPIResponse;
 
 public class MarsRoverAPITest {
 
